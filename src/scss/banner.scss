@@ -1,0 +1,56 @@
+
+.banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &__title {
+        position: relative;
+        text-align: center;
+        color: $basic-white;
+        z-index: 1;
+    }
+
+    &__scroll {
+        display: flex;
+        bottom: 30px;
+        text-align: center;
+        background: none;
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+        cursor: pointer;
+
+        path {
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            border-color: $accent;
+
+            path {
+                stroke: $accent;
+            }
+        }
+    }
+
+    &__letter {
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+
+    }
+}
