@@ -1,0 +1,286 @@
+.about {
+
+    &__top {
+        display: flex;
+        margin: 0 auto;
+
+        &-content {
+
+            &__title {
+                font-weight: 700;
+                font-size: 3.8rem;
+                line-height: 4.6rem;
+                background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                margin-bottom: 28px;
+            }
+
+            &__text {
+                font-size: 1.9rem;
+                line-height: 3rem;
+            }
+        }
+
+        &-row {
+            gap: 40px;
+            display: flex;
+            flex-direction: column;
+            border-left: $grey-separator solid 4px;
+            margin-left: 30px;
+            padding-left: 30px;
+        }
+
+        &-advantages {
+            display: flex;
+            flex-direction: column;
+
+            &__img {
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+
+                & span {
+                    font-weight: 700;
+                    font-size: 3.6rem;
+                    line-height: 4.4rem;
+                    text-align: center;
+                    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+
+            &__text {
+                font-size: 1.6rem;
+                line-height: 2rem;
+                color: $main;
+            }
+
+        }
+
+    }
+
+    &__banner {
+        background-image: url("../img/about/about-banner.jpg");
+        height: 584px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 9.6rem;
+        line-height: 11.7rem;
+        letter-spacing: 63px;
+        text-transform: uppercase;
+        color: $basic-white;
+        margin: 60px 0;
+        opacity: 0.8;
+        text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    }
+
+    &__bottom {
+
+        display: flex;
+        margin: 0 auto 60px;
+        gap: 60px;
+
+        &-text {
+            font-size: 1.9rem;
+            line-height: 3rem;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 3.8rem;
+            line-height: 4.6rem;
+            background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+
+    &__card {
+        display: flex;
+        background-color: $basic-white;
+        border-radius: 12px;
+        height: 110px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 10px;
+
+    }
+}
+
+.about-slider {
+    background: $grey-bg;
+    border-bottom: $grey-separator solid 2px;
+    padding: 30px 0;
+
+    .about__text {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $main;
+
+    }
+
+    .swiper-2 {
+        overflow: hidden;
+
+        .swiper-pagination {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+
+            &-bullet {
+                width: 16px;
+                height: 16px;
+                background: rgba(36, 163, 255, 0.2);
+                display: block;
+                border-radius: 10px;
+
+                &-active {
+                    background: $active-regular;
+                }
+            }
+        }
+
+        .swiper-wrapper {
+            margin: 30px 0;
+
+            &-pagination {
+                height: 40px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1440px) {
+    .about {
+        &__banner {
+            height: 438px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+
+        &__top-content {
+            max-width: 65%;
+            width: 100%;
+        }
+
+        &__top-row {
+            max-width: 35%;
+            width: 100%;
+        }
+
+        &__banner {
+            height: 312px;
+            font-size: 8.6rem;
+            line-height: 10.5rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+
+        &__top {
+            flex-direction: column;
+            margin: 0;
+
+            &-content {
+                max-width: 100%;
+
+                &__text {
+                    margin-bottom: 30px;
+                }
+
+            }
+
+            &-row {
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        &__banner {
+            height: 234px;
+            font-size: 4.6rem;
+            line-height: 5.6rem;
+        }
+
+        &__bottom {
+            flex-direction: column;
+            max-width: 100%;
+
+            &-text {
+                max-width: 100%;
+            }
+
+            &-title {
+                max-width: 100%;
+            }
+        }
+        &__card {
+            height: 90px;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 420px) {
+    .about {
+        &__top-content {
+            &__title {
+                font-size: 3rem;
+                line-height: 3.7rem;
+            }
+        }
+
+        &__banner {
+            height: 114px;
+            font-size: 3.6rem;
+            line-height: 4.4rem;
+            letter-spacing: 13px;
+            margin: 30px 0;
+        }
+
+        &__bottom {
+            margin-bottom: 30px;
+            gap: 30px;
+
+            &-text {
+                max-width: 100%;
+            }
+
+            &-title {
+                font-size: 3rem;
+                line-height: 3.7rem;
+            }
+        }
+    }
+}

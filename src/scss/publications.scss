@@ -1,0 +1,122 @@
+.publications {
+    background: $grey-bg;
+    padding: 30px 0 0;
+
+    & .container {
+
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $active-regular;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    &__title {
+        font-size: 3.8rem;
+        line-height: 4.6rem;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 30px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding-bottom: 30px;
+        border-bottom: $grey-separator solid 4px;
+    }
+
+}
+
+.article{
+    background: $basic-white;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 15px;
+        display: block;
+        overflow: hidden;
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.25s;
+        }
+    }
+
+    &__block {
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    &__name {
+        color: $active-regular;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    &__date {
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $grey-text;
+        padding-bottom: 15px;
+        border-bottom: $grey-separator solid 4px;
+    }
+
+    &__text {
+        margin-top: 15px;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: $basic-black;
+    }
+}
+
+@media (max-width: 768px) {
+    .publications__row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .article:last-of-type:nth-child(odd) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 420px) {
+    .publications {
+        &__row {
+            grid-template-columns: 1fr;
+        }
+
+        &__title {
+            font-size: 3rem;
+            line-height: 3.7rem;
+        }
+    }
+    .article:last-of-type:nth-child(odd) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}

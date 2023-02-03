@@ -6,12 +6,17 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin-top: -176px;
 
     &__title {
         position: relative;
         text-align: center;
         color: $basic-white;
-        z-index: 1;
+    }
+
+    .banner__letter {
+        user-select: none;
+        pointer-events: none;
     }
 
     &__scroll {
@@ -50,7 +55,19 @@
         height: 100%;
         left: 50%;
         transform: translateX(-50%);
-
-
     }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        margin-top: -280px;
+    }
+}
+
+@media (max-width: 420px) {
+    .banner {
+        height: 80vh;
+        margin-top: -132px;
+    }
+
 }

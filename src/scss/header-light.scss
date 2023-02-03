@@ -1,0 +1,125 @@
+.header.light {
+    position: initial;
+    padding-bottom: 60px;
+
+    .header {
+        &__logo {
+            &-text {
+                color: $main;
+            }
+        }
+
+        &__contact {
+
+            &-lang {
+                &__item {
+                    color: $grey-separator;
+                    transition: all 0.3s;
+                    text-decoration: none;
+
+                    &:not(.active):hover {
+                        background-color: #F5F5FA;
+                    }
+
+                    &.active {
+                        color: $basic-white;
+                    }
+                }
+
+            }
+
+            &-address {
+                color: $grey-text;
+
+                &:before {
+                    background: $grey-text;
+                }
+            }
+
+            &-phone {
+                color: $grey-text;
+
+                &:before {
+                    background: $grey-text;
+                }
+            }
+
+            &-link {
+                &:before {
+                    background: $grey-text;
+                }
+            }
+        }
+
+        &__nav {
+            &-item {
+                & a {
+                    color: $active-regular;
+
+                    &.active {
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header-light {
+        &__contact-address {
+            color: $grey-text;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .header.light {
+        padding-bottom: 10px;
+    }
+    .header.light .header {
+
+        &__contact {
+            background-color: $grey-bg;
+
+            &-lang__item {
+                color: $grey-text;
+            }
+        }
+
+        &__nav {
+            &:before {
+                background: $main;
+            }
+
+            &-list {
+                background: $basic-white;
+            }
+
+            &-item {
+                background: $grey-bg;
+
+                & a {
+                    color: $active-regular;
+                }
+
+                &:hover {
+                    background: $grey-separator;
+                }
+
+                &.active a {
+                    color: $accent;
+                }
+            }
+        }
+
+        &__logo {
+            &-menu {
+                span {
+                    background: $main;
+                }
+            }
+        }
+    }
+}
+

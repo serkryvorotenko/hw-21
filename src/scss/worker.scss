@@ -1,0 +1,114 @@
+.worker {
+    padding: 80px 0 30px 0;
+
+    .swiper-pagination {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        &-bullet {
+            width: 16px;
+            height: 16px;
+            background: rgba(36, 163, 255, 0.2);
+            display: block;
+            border-radius: 10px;
+
+            &-active {
+                background: $active-regular;
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        gap: 30px;
+        background: $grey-bg;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        &-img {
+            position: relative;
+            min-width: 298px;
+
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-exposition {
+            padding: 30px 0;
+
+            &__title {
+                font-weight: 700;
+                font-size: 1.4rem;
+                line-height: 17px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $active-regular !important;
+                margin-bottom: 5px;
+            }
+
+            &__text {
+                background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                margin-bottom: 30px;
+            }
+
+            &__name {
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 2rem;
+                color: $grey-text;
+                margin-bottom: 6px;
+            }
+
+            &__position {
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                color: $grey-text;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .worker__card {
+        flex-direction: column;
+
+        &-img {
+            height: 500px;
+        }
+
+        &-exposition {
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 0 30px;
+    }
+    .worker__card {
+        gap: 0;
+
+        &-exposition__text {
+            font-size: 3rem;
+            line-height: 3.7rem;
+        }
+
+
+    }
+}

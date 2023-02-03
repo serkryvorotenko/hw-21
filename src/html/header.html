@@ -1,12 +1,12 @@
 <header class="header">
     <div class="container">
         <div class="header__logo-wrapper">
-            <a href="#" class="header__logo">
-                <img src="../img/logo-white.svg" alt="">
+            <a href="/" class="header__logo">
+                <img src="../img/logo/logo-white.svg" alt="">
             </a>
-            <p class="header__logo-text">
-                services
-            </p>
+            @@if (text){<p class="header__logo-text">
+                @@text
+            </p>}
             <button class="header__logo-menu" id="menu">
                 <span></span>
                 <span></span>
@@ -27,7 +27,7 @@
                     0800 211 927
                 </a>
                 <a href="#" class="header__contact-link">
-                    <img src="../img/fb.svg" alt="">
+                    <img src="../img/fb/fb-logo.svg" alt="">
                 </a>
             </div>
             <nav class="header__nav" id="header__utils">
@@ -35,13 +35,12 @@
                     <img src="../img/close.svg" alt="">
                 </button>
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#">about us</a></li>
-                    <li class="header__nav-item"><a href="#">services</a></li>
-                    <li class="header__nav-item"><a href="#">team</a></li>
-                    <li class="header__nav-item active"><a href="#">publications</a></li>
-                    <li class="header__nav-item"><a href="#">contact</a></li>
+                    <li class="header__nav-item"><a class="link__hover" href="../about.html">about us</a></li>
+                    <li class="header__nav-item"><a class="link__hover" href="../services.html">services</a></li>
+                    <li class="header__nav-item"><a class="link__hover" href="../team.html">team</a></li>
+                    <li class="header__nav-item"><a class="link__hover  active" href="../blog.html">publications</a></li>
+                    <li class="header__nav-item"><a class="link__hover" href="../contact.html">contact</a></li>
                 </ul>
-
             </nav>
         </div>
     </div>

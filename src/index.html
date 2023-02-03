@@ -4,13 +4,21 @@
 "title":"hw-21__Kryvorotenko"
 })
 <body>
-@@include('html/header.html',{})
+@@include('html/header.html',{
+"text":""
+})
 <main>
     <article>
         <div class="dark__bg">
             @@include('html/banner.html',{})
-
+            @@include('html/special.html',{})
+            @@include('html/advantage.html'{})
         </div>
+        @@include('html/worker.html'{})
+        @@include('html/partners.html'{})
+        @@include('html/publications.html',{
+        "title":"We have something to tell"
+        })
     </article>
 </main>
 @@include('html/footer.html',{})

@@ -1,5 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import "node_modules/swiper/swiper";
 
+@mixin bg {
+    display: block;
+    content: "";
+    position: absolute;
+    border-radius: 0 0 12px 12px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+$basic-black: #000000;
 $basic-white: #FFFFFF;
 $main: #323264;
 $main-alt: #46466E;
@@ -30,7 +42,16 @@ $gradient-red-text: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
 html {
     font-size: 10px;
     line-height: 10px;
+    scroll-behavior: smooth;
 
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    & main{
+        flex-grow: 1;
+    }
 }
 
 .container {
@@ -38,6 +59,18 @@ html {
     width: 100%;
     padding: 0 60px;
     margin: 0 auto;
+}
+
+.link__hover {
+    &:hover {
+
+        color: $accent !important;
+        text-decoration: none !important;
+
+        path {
+            stroke: $accent;
+        }
+    }
 }
 
 
@@ -90,6 +123,10 @@ html {
 
 .ul {
     list-style: none;
+    color: $basic-white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
     li {
         font-size: 1.8rem;
@@ -112,11 +149,12 @@ html {
     li {
         font-size: 1.8rem;
         line-height: 2.6rem;
+        font-weight: 400;
         counter-increment: li;
 
         &::before {
             content: counter(li);
-            color: red;
+            color: $accent;
             display: inline-block;
             width: 1em;
             margin-left: -1.5em;
@@ -144,13 +182,109 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+
+}
+
 .dark__bg {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 0 0 12px 12px;
+    padding-top: 176px;
+
+}
+
+.col-12 {
+    max-width: 100%;
+    width: 100%;
+}
+
+.col-11 {
+    max-width: calc(100% / 12 * 11);
+    width: 100%;
+}
+
+.col-10 {
+    max-width: calc(100% / 12 * 10);
+    width: 100%;
+}
+
+.col-9 {
+    max-width: calc(100% / 12 * 9);
+    width: 100%;
+}
+
+.col-8 {
+    max-width: calc(100% / 12 * 8);
+    width: 100%;
+}
+
+.col-7 {
+    max-width: calc(100% / 12 * 7);
+    width: 100%;
+}
+
+.col-6 {
+    max-width: calc(100% / 12 * 6);
+    width: 100%;
+}
+
+.col-5 {
+    max-width: calc(100% / 12 * 5);
+    width: 100%;
+}
+
+.col-4 {
+    max-width: calc(100% / 12 * 4);
+    width: 100%;
+}
+
+.col-3 {
+    max-width: calc(100% / 12 * 3);
+    width: 100%;
+}
+
+.col-2 {
+    max-width: calc(100% / 12 * 2);
+    width: 100%;
+}
+
+.dark__bg {
+    position: relative;
+
+    &:before {
+        @include bg;
+        background: #CACADB;
+        height: 10px;
+        width: calc(100% - 40px);
+        z-index: 1;
+    }
+
+    &:after {
+        @include bg;
+        background: #E7E7F2;
+        height: 20px;
+        width: calc(100% - 80px);
+    }
 }
 
 @import "header";
+@import "header-light";
 @import "banner";
+@import "special";
+@import "advantage";
+@import "worker";
+@import "partners";
+@import "publications";
+@import "footer";
+@import "services";
+@import "publication";
+@import "blog";
+@import "contact";
+@import "employee";
+@import "team";
+@import "about";
+
 
 @media (max-width: 1440px) {
 
@@ -161,11 +295,15 @@ a {
 }
 
 @media (max-width: 768px) {
-
+    .dark__bg {
+        padding-top: 280px;
+    }
 }
 
 @media (max-width: 420px) {
-
+    .dark__bg {
+        padding-top: 132px;
+    }
 }
 
 
